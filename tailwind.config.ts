@@ -9,7 +9,7 @@ const config: Config = {
   ],
   theme: {
     boxShadow: {
-      primary: "0 0 10px 0 rgba(0, 0, 0, 0.1)",
+      primary: "0 0 10px 0 rgba(0, 0, 0, 0.09)",
     },
     screens: {
       xs: "580px",

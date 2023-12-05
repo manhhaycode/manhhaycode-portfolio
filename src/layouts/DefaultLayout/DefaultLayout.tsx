@@ -7,7 +7,7 @@ export default function DefaultLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="2xl:max-w-[1536px]">
+    <div className="2xl:max-w-[1536px] relative">
       <Header />
       {children}
     </div>

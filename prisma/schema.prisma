@@ -16,25 +16,7 @@ model Project {
   updatedAt DateTime @updatedAt
   title     String   @db.VarChar(255)
   content   String?
+  techStack String @db.VarChar(255)
   published Boolean  @default(false)
-  user      User     @relation(fields: [userId], references: [id])
-  userId    String     @unique @map("user_id") @db.Uuid
   @@map("projects")
-}
-
-model Profile {
-  id     String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  bio    String?
-  user   User    @relation(fields: [userId], references: [id])
-  userId String  @unique @map("user_id") @db.Uuid
-  @@map("profiles")
-}
-
-model User {
-  id         String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  email      String   @unique
-  name       String?
-  projects   Project[]
-  profile    Profile?
-  @@map("users")
 }
