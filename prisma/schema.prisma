@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -11,12 +8,30 @@ datasource db {
 }
 
 model Project {
-  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  title     String   @db.VarChar(255)
-  content   String?
-  techStack String @db.VarChar(255)
+  title     String
+  content   String
+  teamSize  Int?     @map("team_size")
+  techStack String[] @map("tech_stack")
   published Boolean  @default(false)
+  gitHubUrl String?  @map("git_hub_url")
+  demoUrl   String   @map("demo_url")
+  image     String
+
   @@map("projects")
+}
+
+model Certificate {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title     String
+  content   String
+  published Boolean  @default(false)
+  image     String
+  url       String   
+
+  @@map("certificates")
 }

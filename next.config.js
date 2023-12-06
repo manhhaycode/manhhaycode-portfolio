@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    domains: ["skillicons.dev"],
-    formats: ["image/avif", "image/webp"],
-  },
+    images: {
+        domains: ['i.ibb.co'],
+        formats: ['image/avif', 'image/webp'],
+    },
+    reactStrictMode: true,
 };
 
 module.exports = nextConfig;

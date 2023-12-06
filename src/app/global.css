@@ -3,45 +3,71 @@
 @tailwind utilities;
 
 @layer components {
-  .avatar-main {
-    transition: all 0.5s ease-in-out;
-    animation: morph 6s infinite;
-  }
+    .avatar-main {
+        transition: all 0.5s ease-in-out;
+        animation: morph 6s infinite;
+    }
 
-  @keyframes morph {
-    0% {
-      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    .front-end-rotate {
+        animation: rotate 9s linear infinite;
     }
-    50% {
-      border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+
+    .Tooltip {
+        background-color: #444;
+        color: white;
+        font-size: 90%;
+        padding: 4px 8px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        width: max-content;
+        max-width: calc(100vw - 10px);
     }
-    100% {
-      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+
+    @keyframes morph {
+        0% {
+            border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+        }
+        50% {
+            border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+        }
+        100% {
+            border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+        }
     }
-  }
+
+    @keyframes rotate {
+        100% {
+            -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+        }
+    }
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
 }
 
 html *::-webkit-scrollbar-thumb {
-  background-color: #8e8e8e;
-  border-radius: 20px;
+    background-color: #8e8e8e;
+    border-radius: 20px;
 }
 
 html *::-webkit-scrollbar-track {
-  background-color: #fff;
-  border-radius: 20px;
+    background-color: #fff;
+    border-radius: 20px;
 }
 
 html *::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
 }
 
 html *::-webkit-scrollbar-thumb:hover {
-  background-color: #878787;
+    background-color: #878787;
 }

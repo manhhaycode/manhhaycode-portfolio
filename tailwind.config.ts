@@ -11,6 +11,9 @@ const config: Config = {
     boxShadow: {
       primary: "0 0 10px 0 rgba(0, 0, 0, 0.09)",
     },
+    textColor: {
+      hover: "#FF3B5C",
+    },
     screens: {
       xs: "580px",
       sm: "640px",
