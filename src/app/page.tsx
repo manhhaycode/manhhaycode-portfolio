@@ -10,28 +10,7 @@ export const revalidate = false;
 export default async function Main() {
     const listProject = await prisma.project.findMany({ where: { published: true }, orderBy: { id: 'asc' } });
     const listCertificate = await prisma.certificate.findMany({ where: { published: true }, orderBy: { id: 'asc' } });
-    // await prisma.certificate.createMany({
-    //     data: [
-    //         {
-    //             image: '/images/WebDesign_Certificate.jpg',
-    //             content: 'Web Design for Everybody',
-    //             published: true,
-    //             title: 'Coursera',
-    //         },
-    //         {
-    //             image: '/images/WebDesign_Certificate.jpg',
-    //             content: 'Web Design for Everybody',
-    //             published: true,
-    //             title: 'Coursera',
-    //         },
-    //         {
-    //             image: '/images/WebDesign_Certificate.jpg',
-    //             content: 'Web Design for Everybody',
-    //             published: true,
-    //             title: 'Coursera',
-    //         },
-    //     ],
-    // });
+
     return (
         <Suspense fallback={<div>Loading...</div>}>
             <div className="flex flex-col gap-y-16">
