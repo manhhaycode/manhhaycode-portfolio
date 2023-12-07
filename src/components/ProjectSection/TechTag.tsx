@@ -6,7 +6,7 @@ export default function TechTag({ tech, ...props }: { tech: string } & React.HTM
         <p
             {...props}
             className={twMerge(
-                'text-[#fff] shadow-primary p-3 text-base font-semibold bg-[#FF3B5C] rounded-md cursor-pointer',
+                'text-[#fff] shadow-primary p-2 text-xs font-semibold bg-[#FF3B5C] rounded-md cursor-pointer xs:text-sm sm:text-base sm:p-3',
                 props.className,
             )}
         >

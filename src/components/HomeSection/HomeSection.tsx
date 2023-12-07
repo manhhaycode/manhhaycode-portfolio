@@ -19,11 +19,13 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '../common/Tooltip';
 
 export default function HomeSection() {
     return (
-        <section id="home" className="mx-auto max-w-6xl p-10 h-screen bg-[#f9f9f9]">
-            <div className="flex justify-between items-center">
-                <div className="max-w-lg relative flex flex-col gap-y-5">
-                    <h1 className="text-5xl text-[#2d2e32] font-bold leading-[1.2]">Front-End React Developer</h1>
-                    <div className="h-14 w-14 absolute top-14 right-44">
+        <section id="home" className="mx-auto max-w-6xl p-5 sm:min-h-screen sm:p-10 bg-[#f9f9f9]">
+            <div className="flex justify-between items-center gap-y-10 flex-col-reverse lgm:flex-row ">
+                <div className="max-w-lg relative flex flex-col gap-y-5  items-center text-center lgm:items-start lgm:text-start">
+                    <h1 className="text-[#2d2e32] font-bold !leading-[1.2] text-3xl xs:text-5xl">
+                        Front-End React Developer
+                    </h1>
+                    <div className="absolute top-10 right-14 w-11 xs:w-14 hidden sm:block lgm:top-14 lgm:right-44">
                         <Image src="/images/hi.png" alt={'hi'} />
                     </div>
                     <p>
@@ -48,7 +50,7 @@ export default function HomeSection() {
                         </a>
                     </div>
                 </div>
-                <div className="w-[400px] h-auto">
+                <div className="w-4/5 sm:w-[400px] h-auto">
                     <Image
                         priority
                         style={{
@@ -60,12 +62,12 @@ export default function HomeSection() {
                     />
                 </div>
             </div>
-            <div className="mt-10 flex gap-x-10">
-                <div className="flex gap-x-4 items-center">
+            <div className="mt-10 flex gap-x-10 gap-y-12 flex-col lgm:flex-row">
+                <div className="flex gap-x-4 gap-y-5 items-center flex-col lgm:flex-row">
                     <h3 className="text-[#2d2e32] font-semibold min-w-max">Tech Stack</h3>
-                    <div className="w-px h-10 bg-[rgba(45,46,50,.5)]"></div>
+                    <div className="w-20 h-[2px] bg-[rgba(45,46,50,.5)] lgm:w-px lgm:h-10"></div>
                 </div>
-                <ul className="flex flex-wrap gap-x-8 gap-y-8 max-w-5xl">
+                <ul className="flex flex-wrap gap-x-8 gap-y-8 max-w-5xl justify-center lgm:justify-start">
                     <Tooltip>
                         <TooltipTrigger>
                             <li className="hover:-translate-y-2 transition-all ease-in-out duration-300 cursor-pointer flex">
